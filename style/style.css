@@ -12,29 +12,63 @@ body{
     margin: 0;
     box-sizing: border-box; /*quita el margen blanco por defecto hasta el borde*/
     font-family: 'Kumbh Sans', sans-serif;
+    /* font-family: 'Quicksand', sans-serif;*/
+}
+body{
     background-color: var(--Dark-cyan);
-   /* font-family: 'Quicksand', sans-serif;*/
+    height: 100vh;
+    background-image: url(../images/bg-pattern-bottom.svg), url(../images/bg-pattern-top.svg);
+    background-position: top, bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .profile-card{ /*con el . se accede a la clase profile-card para dentro darle el formato*/
-    border-radius: 25%; /*redondea los bordes de la caja que pertenece a la clase profile-card*/
+    border-radius: 8px; /*redondea los bordes de la caja que pertenece a la clase profile-card*/
     width: 85%; /*ya o ocupa el 100% de la pantalla la caja*/
     margin: 0 auto; /*maneja todo el cuadrado los datos: arriba derecha abajo izquierda*/
+    background-color: white;
+    overflow: hidden;
 }
 .profile-card-top{
     background-image: url(../images/bg-pattern-card.svg);
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 .profile-card-top img{
     border-radius: 50%; /*vuelve redonda la foto y el siguiente le da un borde blanco*/
     border: 5px solid white;
-    /*text-align: center;*/
+    position: absolute;
+    bottom: -53px;
+    
 }
-.profile-card-bottom{
-    background-color: white;
+.profile-card-bottom_datos-profile> div{
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.profile-card-bottom_datos-profile> div span:nth-child(1){
+    font-size: var(--Name-stats-Font-size);
+    font-weight: 700;
+    margin-right: 8px;
+}
+.profile-card-bottom_datos-profile> div span:nth-child(2){
+    font-size: var(--Name-stats-Font-size);
+    font-weight: 400;
+    color: var(--Dark-gray);
+}
+.profile-card-bottom_datos-profile> p{
+    text-align: center;
+    color: var(--Dark-gray);
+    font-size: 14px;
 }
 .profile-card-bottom_datos-seguidores{
     display: flex; /*pone las cajitas una al lado de la otra*/
     justify-content: space-around; /*les da espacio entre si*/
-    border-top: 1px solid var(--Dark-grayish-blue);
+    border-top: 1px solid var(--Dark-gray);
 }
 .profile-card-bottom_datos-seguidores div p:nth-child(1){
     font-size: var(--Name-stats-Font-size);
