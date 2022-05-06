@@ -1,0 +1,49 @@
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+
+    --Name-stats-Font-size: 18px;
+
+}
+html,
+body{
+    margin: 0;
+    box-sizing: border-box; /*quita el margen blanco por defecto hasta el borde*/
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--Dark-cyan);
+   /* font-family: 'Quicksand', sans-serif;*/
+}
+.profile-card{ /*con el . se accede a la clase profile-card para dentro darle el formato*/
+    border-radius: 25%; /*redondea los bordes de la caja que pertenece a la clase profile-card*/
+    width: 85%; /*ya o ocupa el 100% de la pantalla la caja*/
+    margin: 0 auto; /*maneja todo el cuadrado los datos: arriba derecha abajo izquierda*/
+}
+.profile-card-top{
+    background-image: url(../images/bg-pattern-card.svg);
+}
+.profile-card-top img{
+    border-radius: 50%; /*vuelve redonda la foto y el siguiente le da un borde blanco*/
+    border: 5px solid white;
+    /*text-align: center;*/
+}
+.profile-card-bottom{
+    background-color: white;
+}
+.profile-card-bottom_datos-seguidores{
+    display: flex; /*pone las cajitas una al lado de la otra*/
+    justify-content: space-around; /*les da espacio entre si*/
+    border-top: 1px solid var(--Dark-grayish-blue);
+}
+.profile-card-bottom_datos-seguidores div p:nth-child(1){
+    font-size: var(--Name-stats-Font-size);
+    font-weight: 700;
+    text-align: center;
+}
+.profile-card-bottom_datos-seguidores div p:nth-child(2){
+    font-weight: 400;
+    color: var(--Dark-gray);
+    font-size: 14px;
+    text-align: center;
+}
